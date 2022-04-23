@@ -1,0 +1,33 @@
+﻿@model StudentManager.Model.Model.UserModel.UserModel
+
+<div class="form-layout form-layout-4 modal-body">
+    <input type="hidden" asp-for="UserId"/>
+    <div class="row mg-b-20" style="padding-top :10px">
+        <label class="col-sm-4 form-control-label"> UserName <span class="text-danger">*</span></label>
+        <div class="col-sm-4 mg-t-10 mg-sm-t-0">
+            <input type="text" class="form-control" asp-for="UserName" id="userName">
+            @Html.ValidationMessageFor(x=>x.UserName)
+        </div>
+    </div><!-- row -->
+    <div class="row mg-b-20" style="padding-top :10px">
+        <label class="col-sm-4 form-control-label"> Email <span class="text-danger">*</span></label>
+        <div class="col-sm-4 mg-t-10 mg-sm-t-0">
+            <input type="text" class="form-control" asp-for="Email" id="email">
+            @Html.ValidationMessageFor(x=>x.Email)
+        </div>
+    </div><!-- row -->
+    <div class="row mg-b-20" style="padding-top :10px ; padding-bottom:10px;">
+        <label class="col-sm-4 form-control-label"> Password <span class="text-danger">*</span></label>
+        <div class="col-sm-4 mg-t-10 mg-sm-t-0">
+            <input type="password" class="form-control" asp-for="Password" id="password">
+            @Html.ValidationMessageFor(x=>x.Password)
+        </div>
+    </div><!-- row -->
+        <div class="row mg-b-20" style="padding-top :10px ; padding-bottom:10px;">
+        <label class="col-sm-4 form-control-label"> RePassword <span class="text-danger">*</span></label>
+        <div class="col-sm-4 mg-t-10 mg-sm-t-0">
+            <input type="password" class="form-control" asp-for="Repassword" id="repassword">
+            @Html.ValidationMessageFor(x=>x.Repassword)
+        </div>
+    </div><!-- row -->
+</div><!-- form-layout -->

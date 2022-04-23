@@ -1,0 +1,28 @@
+﻿@model StudentManager.Model.Model.UserModel.UserModel
+<form asp-controller="Accout" asp-action="Login" method="post" id="frmCreate">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div>
+        <span>Login</span>
+    </div>
+     <div class="row mg-b-20" style="padding-top :10px">
+        <label class="col-sm-4 form-control-label"> UserName <span class="text-danger">*</span></label>
+        <div class="col-sm-4 mg-t-10 mg-sm-t-0">
+            <input type="text" class="form-control" asp-for="UserName" id="userName">
+            @Html.ValidationMessageFor(x=>x.UserName)
+        </div>
+    </div><!-- row -->
+     <div class="row mg-b-20" style="padding-top :10px ; padding-bottom:10px;">
+        <label class="col-sm-4 form-control-label"> Password <span class="text-danger">*</span></label>
+        <div class="col-sm-4 mg-t-10 mg-sm-t-0">
+            <input type="text" class="form-control" asp-for="Password" id="password">
+            @Html.ValidationMessageFor(x=>x.UserName)
+        </div>
+    </div><!-- row -->
+    <div class="form-layout-footer mg-t-30 modal-footer" style="padding-top :10px">
+        <button onclick="onFormSubmitCreate()" type="submit" class="btn btn-primary bd-0">Login</button>
+        <button class="btn btn-secondary bd-0" asp-controller="Student" asp-action="Index">Cancel</button>
+    </div><!-- form-layout-footer -->
+</form>
+@section Scripts{
+<script src="~/js/accoutDatatables.js"></script>
+}

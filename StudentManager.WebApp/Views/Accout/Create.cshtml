@@ -1,0 +1,16 @@
+﻿@model StudentManager.Model.Model.StudentModels.StudentModel
+
+<form asp-controller="Accout" asp-action="Create" method="post" id="frmCreate">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div>
+        <span>Register</span>
+    </div>
+    @Html.Partial("~/Views/Accout/Partial/_FormInput.cshtml")
+    <div class="form-layout-footer mg-t-30 modal-footer" style="padding-top :10px">
+        <button onclick="onFormSubmitCreate()" type="submit" class="btn btn-primary bd-0">Create</button>
+        <button class="btn btn-secondary bd-0" asp-controller="Student" asp-action="Index">Cancel</button>
+    </div><!-- form-layout-footer -->
+</form>
+@section Scripts{
+<script src="~/js/accoutDatatables.js"></script>
+}

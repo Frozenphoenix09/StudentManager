@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div class="container">
+    <h3 class="text-primary">Students</h3>
+    <hr />
+    <a class="btn btn-success" style="margin-bottom:10px" href="/Student/Create"><i class="fa fa-plus"></i> Add New</a>
+    <table id="studentTable" class="table table-bordered table-striped dt-responsive nowrap">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Name</th>
+                <th>Date of birth</th>
+                <th>Address</th>
+                <th>Class</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+@section Scripts{
+    <script src="~/js/studentDatatable.js"></script>
+}
